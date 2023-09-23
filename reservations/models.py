@@ -173,3 +173,5 @@ class Review(Event):
     def __str__(self):
         return f'{self.place} {self.stars}'
     
+    class Meta:
+        unique_together = ['client', 'place']
